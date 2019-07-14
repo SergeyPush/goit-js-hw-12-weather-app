@@ -2,7 +2,7 @@ const key = 'f3ec9826f1d149aea8664106191107';
 
 const request =
   'http://api.apixu.com/v1/current.json?key=f3ec9826f1d149aea8664106191107&q=';
-const baseURL = 'http://api.apixu.com/v1/current.json';
+const baseURL = 'https://api.apixu.com/v1/current.json';
 
 export default function(position) {
   let queryString;
