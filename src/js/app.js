@@ -1,9 +1,10 @@
 import getGeoPosition from './getGeoPosition';
 import fetchWeather from './fetchWeather';
-import PNotify from './../../node_modules/pnotify/dist/es/PNotify.js';
-import PNotifyStyleMaterial from './../../node_modules/pnotify/dist/es/PNotifyStyleMaterial.js';
-import PNotifyButtons from './../../node_modules/pnotify/dist/es/PNotifyButtons.js';
-import './../../node_modules/pnotify/dist/PNotifyBrightTheme.css';
+import PNotify from 'pnotify/dist/es/PNotify.js';
+import PNotifyStyleMaterial from 'pnotify/dist/es/PNotifyStyleMaterial.js';
+import PNotifyButtons from 'pnotify/dist/es/PNotifyButtons.js';
+import 'pnotify/dist/PNotifyBrightTheme.css';
+import 'material-design-icons/iconfont/material-icons.css';
 
 const weatherDetails = document.getElementById('weather');
 const location = document.querySelector("[data-field='location']");
@@ -15,6 +16,7 @@ const image = document.querySelector('img.icon');
 const searchForm = document.getElementById('search-form');
 
 PNotify.defaults.styling = 'material';
+PNotify.defaults.icons = 'material';
 
 getGeoPosition()
   .then(location => {
